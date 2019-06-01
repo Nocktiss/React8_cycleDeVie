@@ -1,30 +1,25 @@
 import React, { Component } from "react";
 
 class MyTitle extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
+ state = {
 			title: '',
 			suptitle: '',
 		};
-		this.handleChange = this.handleChange.bind(this);
-		this.submitForm = this.submitForm.bind(this);
-	}
 
-	handleChange(event) {
+	handleChange = (event) => {
 		this.setState({ title: event.target.value });
 	}
 
-	submitForm(e) {
+	submitForm = (event) => {
 		e.preventDefault();
 		this.setState({ suptitle: `Mon formulaire ${this.state.title}` })
 	}
 
-	componentDidMount() {
+	componentDidMount = () => {
 		console.log("Formulaire rendu")
 	}
 
-	componentDidUpdate() {
+	componentDidUpdate = () => {
 		console.log("Titre changé")
 	}
 
