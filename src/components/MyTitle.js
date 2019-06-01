@@ -11,7 +11,7 @@ class MyTitle extends Component {
 	}
 
 	submitForm = (event) => {
-		e.preventDefault();
+		event.preventDefault();
 		this.setState({ suptitle: `Mon formulaire ${this.state.title}` })
 	}
 
